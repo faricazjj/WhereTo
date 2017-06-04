@@ -15,10 +15,10 @@
         completions."
     </string>
 
-        <string-array name="identity_arrays">
-            <item>Passenger</item>
-            <item>Driver</item>
-        </string-array>
+    <string-array name="identity_arrays">
+        <item>Passenger</item>
+        <item>Driver</item>
+    </string-array>
 
 
 </resources>

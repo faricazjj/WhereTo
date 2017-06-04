@@ -12,13 +12,14 @@
         android:id="@+id/button5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:text="passenger"
-        app:layout_constraintRight_toLeftOf="@+id/button6"
-        tools:layout_constraintRight_creator="1"
         app:layout_constraintBaseline_toBaselineOf="@+id/button6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button6"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_constraintRight_creator="1" />
 
     <Button
         android:id="@+id/button6"
@@ -47,27 +48,31 @@
         android:layout_marginBottom="3dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <Button
+        android:id="@+id/post1_back"
+        android:layout_width="381dp"
+        android:layout_height="149dp"
+        android:backgroundTint="@android:color/holo_green_light"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="54dp"
+        app:layout_constraintRight_toRightOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="54dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintLeft_toRightOf="@+id/button5" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <Button
+        android:id="@+id/post1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:text="Reserve!"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/post1_back"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="13dp"
+        />
+
+
 </android.support.constraint.ConstraintLayout>

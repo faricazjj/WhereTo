@@ -17,9 +17,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import static com.example.faricazjj.whereto.R.id.post1;
+import static com.example.faricazjj.whereto.R.id.post1_back;
+
 public class Confirmation extends AppCompatActivity {
     private Button confirm;
     private TextView status;
+    private Button post1, post1_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +52,14 @@ public class Confirmation extends AppCompatActivity {
         TextView myText = new TextView(null);
         status.setText("Passenger");
 
+        post1 = (Button) findViewById(R.id.post1);
+        post1_back = (Button) findViewById(R.id.post1_back);
         confirm = (Button) findViewById(R.id.confirm);
         confirm.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent j = new Intent(Confirmation.this, LoginActivity.class);
+                post1.setVisibility(View.GONE);
+                post1_back.setVisibility(View.GONE);
+                Intent j = new Intent(Confirmation.this, MainActivity.class);
                 startActivity(j);
             }
         });

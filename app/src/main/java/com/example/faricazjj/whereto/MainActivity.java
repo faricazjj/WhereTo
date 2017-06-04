@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
     private Button passengerbtn;
     private Button driverbtn;
     private Button postbtn;
-    private Button post1;
+    public Button post1;
+    public Button post1_back;
+    private Button buttonPost;
     private ScrollView scrollView;
 
     String postID;
@@ -74,11 +76,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        post1 = (Button) findViewById(R.id.post1);
+
         post1.setVisibility(View.GONE);
+        post1_back.setVisibility(View.GONE);
+        post1 = (Button) findViewById(R.id.post1);
+        post1_back = (Button) findViewById(R.id.post1_back);
         post1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                post1.setVisibility(View.VISIBLE);
                 Intent k = new Intent(MainActivity.this, Confirmation.class);
                 startActivity(k);
             }

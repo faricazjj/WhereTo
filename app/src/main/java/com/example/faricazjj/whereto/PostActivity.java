@@ -1,5 +1,6 @@
 package com.example.faricazjj.whereto;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,7 @@ public class PostActivity extends AppCompatActivity {
         addItemsOnDestination();
         addItemsOnMonth();
         addItemsOnDay();
+        addItemsOnTime();
         addListenerOnButton();
         addListenerOnSpinnerItemSelection();
     }
@@ -73,33 +75,33 @@ public class PostActivity extends AppCompatActivity {
     }
     public void addItemsOnTime(){
         time = (Spinner) findViewById(R.id.time);
-        List<String> list = new ArrayList<String>();
-        list.add("0:00");
-        list.add("1:00");
-        list.add("2:00");
-        list.add("3:00");
-        list.add("4:00");
-        list.add("5:00");
-        list.add("6:00");
-        list.add("7:00");
-        list.add("8:00");
-        list.add("9:00");
-        list.add("10:00");
-        list.add("11:00");
-        list.add("12:00");
-        list.add("13:00");
-        list.add("14:00");
-        list.add("15:00");
-        list.add("16:00");
-        list.add("17:00");
-        list.add("18:00");
-        list.add("19:00");
-        list.add("20:00");
-        list.add("21:00");
-        list.add("22:00");
-        list.add("23:00");
+        List<String> timeList = new ArrayList<String>();
+        timeList.add("0:00");
+        timeList.add("1:00");
+        timeList.add("2:00");
+        timeList.add("3:00");
+        timeList.add("4:00");
+        timeList.add("5:00");
+        timeList.add("6:00");
+        timeList.add("7:00");
+        timeList.add("8:00");
+        timeList.add("9:00");
+        timeList.add("10:00");
+        timeList.add("11:00");
+        timeList.add("12:00");
+        timeList.add("13:00");
+        timeList.add("14:00");
+        timeList.add("15:00");
+        timeList.add("16:00");
+        timeList.add("17:00");
+        timeList.add("18:00");
+        timeList.add("19:00");
+        timeList.add("20:00");
+        timeList.add("21:00");
+        timeList.add("22:00");
+        timeList.add("23:00");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, list);
+                android.R.layout.simple_spinner_item, timeList);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         time.setAdapter(dataAdapter);
     }
@@ -117,6 +119,8 @@ public class PostActivity extends AppCompatActivity {
         time.setOnItemSelectedListener(new CustomOnItemSelectedListener());
     }
 
+
+
     // get the selected dropdown list value
     public void addListenerOnButton() {
 
@@ -128,19 +132,11 @@ public class PostActivity extends AppCompatActivity {
         time = (Spinner) findViewById(R.id.time);
 
         buttonPost.setOnClickListener(new View.OnClickListener() {
-
-            @Override
             public void onClick(View v) {
-
-                Toast.makeText(PostActivity.this,
-                        "OnClickListener : " +
-                                "\nSpinner 1 : "+ String.valueOf(spinner1.getSelectedItem()) +
-                                "\nDestination : "+ String.valueOf(destination.getSelectedItem()) +
-                                "\nMonth : "+ String.valueOf(month.getSelectedItem()) + "\nDay : "+
-                                String.valueOf(day.getSelectedItem()) + "\nTime : "+
-                                String.valueOf(time.getSelectedItem()),
-                        Toast.LENGTH_SHORT).show();
+                Intent j = new Intent(PostActivity.this, MainActivity.class);
+                startActivity(j);
             }
+
 
         });
     }

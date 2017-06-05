@@ -57,10 +57,7 @@ public class Confirmation extends AppCompatActivity {
         confirm = (Button) findViewById(R.id.confirm);
         confirm.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                post1.setVisibility(View.GONE);
-                post1_back.setVisibility(View.GONE);
-                Intent j = new Intent(Confirmation.this, MainActivity.class);
-                startActivity(j);
+                finish();
             }
         });
     }

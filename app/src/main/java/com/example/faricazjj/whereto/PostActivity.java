@@ -141,10 +141,7 @@ public class PostActivity extends AppCompatActivity {
 
         buttonPost.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                post1.setVisibility(View.VISIBLE);
-                post1_back.setVisibility(View.VISIBLE);
-                Intent j = new Intent(PostActivity.this, MainActivity.class);
-                startActivity(j);
+                finish();
             }
 
 

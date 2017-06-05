@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public Button post1_back;
     private Button buttonPost;
     private ScrollView scrollView;
+    private FirebaseAuth auth;
 
     String postID;
     String postFieldKey;
@@ -30,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+       // auth = FirebaseAuth.getInstance();
+        //FirebaseDatabase database = FirebaseDatabase.getInstance();
+        //DatabaseReference userRef = database.getReference().child("Users");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -77,18 +82,32 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        post1.setVisibility(View.GONE);
-        post1_back.setVisibility(View.GONE);
         post1 = (Button) findViewById(R.id.post1);
         post1_back = (Button) findViewById(R.id.post1_back);
+        post1.setVisibility(View.GONE);
+        post1_back.setVisibility(View.GONE);
         post1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent k = new Intent(MainActivity.this, Confirmation.class);
-                startActivity(k);
+                startActivityForResult(k, 1);
+
             }
         });
-
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1){
+            post1.setVisibility(View.VISIBLE);
+            post1_back.setVisibility(View.VISIBLE);
+        }
+        else
+            post1.setVisibility(View.GONE);
+            post1_back.setVisibility(View.GONE);
+    }
+
+
+
     /*private void refreshData(){
         scrollView.setAdapter(new SimpleAdapter(this,get));
     }*/

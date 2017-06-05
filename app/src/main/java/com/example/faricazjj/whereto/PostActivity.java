@@ -141,6 +141,7 @@ public class PostActivity extends AppCompatActivity {
 
         buttonPost.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                setResult(RESULT_OK);
                 finish();
             }
 

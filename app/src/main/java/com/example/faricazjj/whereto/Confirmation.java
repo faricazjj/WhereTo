@@ -32,31 +32,31 @@ public class Confirmation extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference postRef = database.getReference().child("Posts");
         // Read from the database
-        postRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d("WhereTo", "Value is: " + value);
-            }
+        //postRef.addValueEventListener(new ValueEventListener() {
+        // @Override
+        //public void onDataChange(DataSnapshot dataSnapshot) {
+        // This method is called once with the initial value and again
+        // whenever data at this location is updated.
+        //  String value = dataSnapshot.getValue(String.class);
+        //Log.d("WhereTo", "Value is: " + value);
+        //}
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("WhereTo", "Failed to read value.", error.toException());
-            }
-        });
+        //@Override
+        //public void onCancelled(DatabaseError error) {
+        // Failed to read value
+        //  Log.w("WhereTo", "Failed to read value.", error.toException());
+        //}
+
 
         status = (TextView) findViewById(R.id.status);
-        TextView myText = new TextView(null);
         status.setText("Passenger");
 
-        post1 = (Button) findViewById(R.id.post1);
-        post1_back = (Button) findViewById(R.id.post1_back);
+        //post1 = (Button) findViewById(R.id.post1);
+        //post1_back = (Button) findViewById(R.id.post1_back);
         confirm = (Button) findViewById(R.id.confirm);
         confirm.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                setResult(RESULT_OK);
                 finish();
             }
         });

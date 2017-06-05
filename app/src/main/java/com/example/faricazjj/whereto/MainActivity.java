@@ -81,11 +81,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         post1 = (Button) findViewById(R.id.post1);
         post1_back = (Button) findViewById(R.id.post1_back);
-        post1.setVisibility(View.GONE);
-        post1_back.setVisibility(View.GONE);
+       // post1.setVisibility(View.GONE);
+       // post1_back.setVisibility(View.GONE);
         post1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent k = new Intent(MainActivity.this, Confirmation.class);
@@ -94,18 +93,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
+   /* @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1){
+        Log.e("Caitlyn","IN ON ACTIVITY RESULT"+requestCode + resultCode + data);
+        if (requestCode == 1) {
             post1.setVisibility(View.VISIBLE);
             post1_back.setVisibility(View.VISIBLE);
-        }
-        else
+            Log.e("Caitlyn","activity results here");
+        } else {
             post1.setVisibility(View.GONE);
             post1_back.setVisibility(View.GONE);
-    }
-
+        }
+    }*/
 
 
     /*private void refreshData(){

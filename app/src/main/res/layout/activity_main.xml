@@ -53,6 +53,7 @@
         android:layout_width="381dp"
         android:layout_height="149dp"
         android:backgroundTint="@android:color/holo_green_light"
+        android:text="    Joe: I am a Passenger looking for a ride to San Jose on 08/06 at 14:00"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         app:layout_constraintRight_toRightOf="@+id/button5"

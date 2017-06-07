@@ -1,0 +1,22 @@
+PROJECT OVERVIEW
+---------------------------------------------------------------------------------------------------
+As UCSD students, we are familiar with posts that people make on either the ucsd free and for sale 
+or the rideshare group pages on Facebook indicating whether they are selling or buying a ride. But
+posts do get lost on Facebook after a lot of posts are generated, especially when the long weekend
+or break is approaching and everyone is trying to carpool home. At times like this, finding a match
+for you may be difficutl, regardless of whether you are the driver or the passenger.
+
+Our app solves this problem by providing a platform for ucsd studetns to have an easier time buying
+or selling a ride. The app lets you choose if you are a driver or a passenger to filer out the 
+searches. There are options to look through existing posts or create a new post. There will also
+be an option to message your potential passenger or driver to communivate/negotiate the specific
+locations and bag space. Transactions will be done through Venmo as Venmo's security and
+liabilities insurance protects against a majority of theft. In addition, Venmo is an app that is
+frequently used by college students for making transactions with one another.
+
+Our goal is to provide an easy and clean user interface for ucsd students to sell or buy a ride 
+whether it is to LA, the bay area, or just a trip to downtoan for a concert.
+
+BUILT WITH
+--------------------------------------------------------------------------------------------------
+Java, XML, android studio
